@@ -63,8 +63,32 @@
 }
 @media (max-width: 480px) {
     .services {
-        background: white;
-        height: 140vh;
+        height: 100vh;
     }
-    
+    .title {
+        text-align: center;
+        font-size: 4vw;
+        width: 80%;
+    }
+    .tr1 {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 30%;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 12%;
+        grid-row-gap: 10%;
+        top: 20%;
+    }
+    .service {
+        height: 110%;
+    }
+    .service h1 {
+        font-size: 2.7vw;
+    }
+    .service p {
+        font-size: 2vw;
+    }
 }

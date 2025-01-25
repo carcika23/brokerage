@@ -41,5 +41,27 @@
 }
 
 @media (max-width: 480px) {
-    
+    .aboutUs {
+        height: 75vh;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        top: 15%;
+    }    
+    .container img {
+        width: 75vw;
+        height: 30vh;
+    }
+    .containerChild {
+        text-align: center;
+        width: 100%;
+    }
+    .containerChild h1 {
+        font-size: 6vw;
+    }
+    .containerChild p {
+        font-size: 4vw;
+        width: 100%;
+    }
 }

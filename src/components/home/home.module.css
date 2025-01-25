@@ -85,7 +85,7 @@ tr {
         width: 100%;
     }
     .blur {
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(0px);
         height: 100vh;
     }
     .left {

@@ -42,7 +42,7 @@
 
 @media (max-width: 480px) {
     .aboutUs {
-        height: 75vh;
+        height: 100vh;
     }
     .container {
         flex-direction: column;

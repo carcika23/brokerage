@@ -87,5 +87,32 @@
 }
 
 @media (max-width: 480px) {
-  
+  .packagesDiv {
+    height: 120vh;
+  }
+  .container {
+    flex-direction: column;
+    top: 5%;
+  }
+  .container {
+    width: 100%;
+    align-items: center;
+  }
+  .containerChild {
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+  .container img {
+    width: 75vw;
+    height: 30vh;
+    margin-top: 0%;
+  }
+  .title {
+    text-align: center;
+    font-size: 4.2vw;
+    width: 80%;
+  }
 }

@@ -31,3 +31,21 @@ th {
     font-weight: 400;
     margin-top: 5%;
 }
+@media (max-width: 480px) {
+    .customsPrice {
+        height: 137vh;
+    }
+    .title {
+        text-align: center;
+        font-size: 4.2vw;
+        width: 80%;
+    }
+    .containerTable {
+        margin-right: 20% !important;
+    }
+    .warning {
+        font-size: 3vw;
+        width: 85%;
+        text-align: center;
+    }
+}

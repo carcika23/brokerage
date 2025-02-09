@@ -4,10 +4,11 @@ import background from '../../assets/customsBg2.jpg'
 import ServerImg from '../../assets/serverImg.svg'
 import { useState, useEffect } from 'react';
 import LandingMobile from '../../assets/customBgMobile.svg'
-
-const welcomeText = 'We specialize in creating modern, responsive, and dynamic websites tailored to your needs. Whether you’re launching a new business, upgrading your online presence, or looking for innovative web solutions, we’re here to bring your vision to life. Explore our services and let us help you turn ideas into reality. Your digital success starts here!'
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+
+  const { t } = useTranslation();
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -28,8 +29,8 @@ function Home() {
       <div className={styles.left}>
         <div>
           <tr></tr>
-          <h1>Customs Brokerage Services</h1>
-          <p>Take advantage of the customs broker's services</p>
+          <h1>{t('welcome')}</h1>
+          <p>{t("desc")}</p>
         </div>
       </div>
     </div>

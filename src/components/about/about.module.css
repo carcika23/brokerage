@@ -33,6 +33,8 @@
 }
 .containerChild {
     width: 40%;
+    position: relative;
+    bottom: 5%;
 }
 .container img {
     width: 33vw;
@@ -56,6 +58,7 @@
     .containerChild {
         text-align: center;
         width: 100%;
+        bottom: -5%;
     }
     .containerChild h1 {
         font-size: 6vw;

@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './customsPrice.module.css'
 import { Carousel, Card, Button, Modal, Table } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 
 function CustomsPrice() {
+
+  const { t } = useTranslation();
 
   const columns = [
     {
@@ -14,17 +17,17 @@ function CustomsPrice() {
       align: "center",
     },
     {
-      title: "Name",
+      title: t("column1"),
       dataIndex: "name",
       key: "name",
     },
     {
-      title: "Customs Corridor",
+      title: t("column2"),
       dataIndex: "corridor",
       key: "corridor",
     },
     {
-      title: "Price",
+      title: t("column3"),
       dataIndex: "price",
       key: "price",
       align: "center",
@@ -35,56 +38,56 @@ function CustomsPrice() {
     {
       key: "1",
       number: 1,
-      name: "Advance declaration",
+      name: t("table1"),
       corridor: "",
       price: "$100",
     },
     {
       key: "2",
       number: 2,
-      name: "Customs Procedure (Exp/Imp)",
-      corridor: "Green",
+      name: t("table2"),
+      corridor: t("green"),
       price: "$100",
     },
     {
       key: "3",
       number: 3,
-      name: "Customs Procedure (Exp/Imp)",
-      corridor: "Yellow",
+      name: t("table2"),
+      corridor: t("yellow"),
       price: "$120",
     },
     {
       key: "4",
       number: 4,
-      name: "Customs Procedure (Exp/Imp)",
-      corridor: "Red",
+      name: t("table2"),
+      corridor: t("red"),
       price: "$160",
     },
     {
       key: "5",
       number: 5,
-      name: "Expertise",
+      name: t("table3"),
       corridor: "",
       price: "$100",
     },
     {
       key: "6",
       number: 6,
-      name: "Complex declaration (more than 15 commodity codes)",
-      corridor: "Any of them",
+      name: t("table4"),
+      corridor: t("any"),
       price: "$10/item",
     },
     {
       key: "7",
       number: 7,
-      name: "Phytosanitary certificate",
+      name: t("table5"),
       corridor: "",
       price: "$50",
     },
     {
       key: "8",
       number: 8,
-      name: "Origin certificate",
+      name: t("table6"),
       corridor: "",
       price: "$40",
     },
@@ -102,7 +105,7 @@ function CustomsPrice() {
 
     return ( 
         <div className={styles.customsPrice}>
-          <h1 className={styles.title}>Customs Brokerage Price</h1>
+          <h1 className={styles.title}>{t("offersTitle")}</h1>
           <div className={styles.containerTable}>
             <Table
               columns={columns}
@@ -114,7 +117,7 @@ function CustomsPrice() {
               }
             />
           </div>
-          <p className={styles.warning}> * Prices are determined per one customs declaration, the price does not include customs fees and other government taxes.</p>
+          <p className={styles.warning}>{t("warning")}</p>
         </div> 
     );
 }

@@ -17,11 +17,14 @@ th {
 }
 .containerTable {
     margin-top: 3% !important;
-    width: 70%;
+    width: 72%;
 }
 .warning {
     font-size: 1vw;
     color: #4792f4b5;
+}
+.containerTable .ant-table-row td:nth-child(2) {
+    width: 5% !important;
 }
 .title {
     font-size: 3vw;
@@ -33,7 +36,7 @@ th {
 }
 @media (max-width: 480px) {
     .customsPrice {
-        height: 137vh;
+        height: 160vh;
     }
     .title {
         text-align: center;

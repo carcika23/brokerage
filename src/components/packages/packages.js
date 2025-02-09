@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import styles from './packages.module.css'
 import Services from '../../assets/services.jpg'
 import { useState } from "react";
-
-
+import { useTranslation } from 'react-i18next';
 
 function Packages() {
+
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState({
     companyName: "",
@@ -36,7 +37,7 @@ function Packages() {
     try {
       const response = await fetch(endpoint, options);
       if (response.ok) {
-        setStatus("Email sent successfully!");
+        setStatus(t("status"));
         setFormData({ name: "", email: "", number: "", message: "", route: "", cargo: "", companyName: ""}); // Reset form
       } else {
         setStatus("Failed to send the message. Please try again.");
@@ -49,7 +50,7 @@ function Packages() {
 
     return ( 
         <div className={styles.packagesDiv}>
-          <h1 className={styles.title}>Tell us what you need</h1>
+          <h1 className={styles.title}>{t("contactTitle")}</h1>
             <div className={styles.container}>
                 <img src={Services} />
                 <div className={styles.containerChild}>
@@ -57,7 +58,7 @@ function Packages() {
                   <input
                       type="text"
                       name="companyName"
-                      placeholder="Company Name"
+                      placeholder={t("input1")}
                       value={formData.companyName}
                       onChange={handleChange}
                       required
@@ -65,7 +66,7 @@ function Packages() {
                     <input
                       type="text"
                       name="name"
-                      placeholder="Your Name"
+                      placeholder={t("input2")}
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -73,7 +74,7 @@ function Packages() {
                     <input
                       type="email"
                       name="email"
-                      placeholder="Your Email"
+                      placeholder={t("input3")}
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -81,7 +82,7 @@ function Packages() {
                     <input
                       type="number"
                       name="number"
-                      placeholder="Your Number"
+                      placeholder={t("input4")}
                       value={formData.number}
                       onChange={handleChange}
                       required
@@ -89,7 +90,7 @@ function Packages() {
                     <input
                       type="text"
                       name="cargo"
-                      placeholder="Type Of Cargo"
+                      placeholder={t("input5")}
                       value={formData.cargo}
                       onChange={handleChange}
                       required
@@ -97,19 +98,19 @@ function Packages() {
                     <input
                       type="text"
                       name="route"
-                      placeholder="Route"
+                      placeholder={t("input6")}
                       value={formData.route}
                       onChange={handleChange}
                       required
                     />
                     <textarea
                       name="message"
-                      placeholder="What Service Do You Want"
+                      placeholder={t("input7")}
                       value={formData.message}
                       onChange={handleChange}
                       required
                     ></textarea>
-                    <button type="submit">Send Message</button>
+                    <button type="submit">{t("send")}</button>
                   </form>
                   {status && <p>{status}</p>}
                 </div>

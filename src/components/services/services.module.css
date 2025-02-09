@@ -2,7 +2,7 @@
 
 .services {
     width: 100%;
-    height: 170vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     background: rgb(250, 250, 250);
@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 10%;
-    grid-row-gap: 5%;
+    grid-row-gap: 20%;
     text-align: center;
 }
 .service {
@@ -63,7 +63,7 @@
 }
 @media (max-width: 480px) {
     .services {
-        height: 100vh;
+        height: 70vh;
     }
     .title {
         text-align: center;

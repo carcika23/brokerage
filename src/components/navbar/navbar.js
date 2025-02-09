@@ -8,8 +8,12 @@ import HamburgerScrolled from '../../assets/hamburgerScrolled.svg'
 import Login1 from '../../assets/telephoneBlue1.svg'
 import CustomsLogo from '../../assets/customsLogo.svg'
 import CustomsLogoColored from '../../assets/logoColored.svg'
+import { useTranslation } from 'react-i18next';
+
 
 function Navbar() {
+
+    const { t } = useTranslation();
 
   const [scrolling, setScrolling] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -66,11 +70,11 @@ function Navbar() {
             <img src={CustomsLogo} className={styles.logo} />
           )}
           <div className={styles.navbarItems}>
-        <Link>Home</Link>
-        <Link>About</Link>
-        <Link>Services</Link>
-        <Link>Offers</Link>
-        <Link>Contact</Link>
+        <Link>{t("navHome")}</Link>
+        <Link>{t("navAbout")}</Link>
+        <Link>{t("navServices")}</Link>
+        <Link>{t("navOffers")}</Link>
+        <Link>{t("navContact")}</Link>
       </div>
         <ChangeLanguage/>
         {scrolling ? (
